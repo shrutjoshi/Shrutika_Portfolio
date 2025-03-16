@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .hero {
@@ -10,18 +10,44 @@ body {
     justify-content: center;
     color: white;
     text-align: center;
+    position: relative;
 }
 
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+}
 .project-card {
     border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .project-card h3 {
     color: #007bff;
+}
+
+#projects {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 footer {
@@ -65,3 +91,11 @@ a:hover {
     text-decoration: underline;
     transition: all 0.3s ease;
 }
+
+@media (max-width: 767px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
