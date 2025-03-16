@@ -82,11 +82,34 @@ footer {
 }
 
 /* Button Hover Effect */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px;
+    text-transform: uppercase; /* Uppercase text */
+    border: none;
+    transition: all 0.3s ease; /* Smooth transition */
+    font-weight: bold;
+}
+
 .btn-primary:hover {
     background-color: #0056b3;
     color: white;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
+
+.btn-primary:active {
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff7f50; /* Highlight outline when focused */
+}
+
 
 /* Link Hover Effect */
 a:hover {
