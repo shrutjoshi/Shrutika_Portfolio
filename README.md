@@ -1,16 +1,35 @@
-# 🔐 Hey there! I’m Shrutika Joshi – Cybersecurity Professional 🚀  
+# Shrutika Joshi, Cyber Defense Engineer
 
-Welcome to my GitHub! I’m a **Cybersecurity Analyst** with **6+ years of experience** in **Security Operations, Incident Response, and Cloud Security**. I thrive in breaking down complex security challenges, hunting threats, and securing cloud environments.  
+Security operations engineer building detection and response for cloud and AI systems.
 
-💡 I’m passionate about **AI in cybersecurity**, automating security processes, and staying ahead of emerging threats. I love sharing insights on **SecOps, DevSecOps, Threat Intelligence, and Application Security**.  
+7+ years across SOC operations, incident response, detection engineering, SIEM/SOAR, cloud security (AWS, Azure, GCP), and IAM. SOC and incident response are my foundation; cloud and AI security are where I apply them. MS in Cybersecurity, University of Maryland, Baltimore County.
 
-👨‍💻 **What I bring to the table:**  
-- 🔍 **Incident Response & Threat Hunting** – Defending against cyber threats, analyzing security events, and mitigating attacks  
-- ☁️ **Cloud Security (AWS & Azure)** – Hardening cloud environments and implementing security best practices  
-- 🔒 **DevSecOps & Application Security** – Embedding security into the development pipeline  
-- 🎯 **Security Tools & Automation** – SIEM (Splunk), EDR (CrowdStrike), DLP (Symantec), Python scripting for security automation  
+**Portfolio:** https://shrutjoshi.github.io/Shrutika_Portfolio/
 
-📜 **Certifications:** CompTIA CySA+ | Network+ | AWS Cloud Practitioner | Azure Fundamentals  
+## Proven results
 
-🔗 **Let’s Connect!**  
-🌍 [Website](https://yourwebsite.com) | 💼 [LinkedIn](https://www.linkedin.com/in/joshishrutika/) | 📧 [Email](mailto:shrutjoshi75@gmail.com)  
+- 30% reduction in false positives and 25% improvement in MTTR through detection tuning (Veritas Technologies)
+- 40% reduction in manual investigation effort through CrowdStrike API automation (SynergisticIT)
+
+## Case studies
+
+| Domain | Case study |
+|---|---|
+| Detection | [Detection tuning at Veritas](case-studies/veritas-detection-tuning.html) |
+| Automation | [CrowdStrike API investigation automation](case-studies/crowdstrike-api-automation.html) |
+| Detection | [Sigma detection-as-code pipeline](case-studies/sigma-cicd-pipeline.html) (personal project, in progress) |
+
+## Certifications
+
+GCIH, GSEC, GFACT, CompTIA CySA+, CompTIA Network+, AWS Certified Cloud Practitioner, Microsoft Azure Fundamentals
+
+## Repository contents
+
+- `index.html`, `styles.css`, `main.js`: the site (plain HTML, CSS, and vanilla JS; no build step)
+- `case-studies/`: one page per case study
+- `Cyber_Lab_Assignments/`, `Forensic Analysis/`, `FinalProject-One National Investments Company.*`: academic coursework from UMBC
+- `Shrutika_Joshi_Resume_IR.pdf`: current resume
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/joshishrutika/) | [Email](mailto:shrutjoshi75@gmail.com) | [GitHub](https://github.com/shrutjoshi)
