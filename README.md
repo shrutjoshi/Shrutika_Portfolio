@@ -19,9 +19,28 @@ Security operations engineer building detection and response for cloud and AI sy
 | Automation | [CrowdStrike API investigation automation](case-studies/crowdstrike-api-automation.html) |
 | Detection | [Sigma detection-as-code pipeline](case-studies/sigma-cicd-pipeline.html) (personal project, in progress) |
 
+## Home-lab projects (AI security)
+
+Personal projects, not production systems.
+
+- [Breach & Brief: AI security training range](https://github.com/shrutjoshi/ai-security-range): six attack scenarios mapped to the OWASP Top 10 for LLM Applications, with detection logic as tested Python modules behind a FastAPI service ([live demo](https://shrutjoshi.github.io/ai-security-range/src/ai_security_range/static/index.html))
+- [Layered LLM jailbreak detector](https://github.com/shrutjoshi/ai-jailbreak-detector): regex, embedding similarity, and an LLM judge; 99.6% accuracy and 100% recall on a 505-prompt held-out set, with a documented red-team failure analysis
+
+## Skills
+
+- **Detection & SIEM:** Sigma, Splunk (SPL), Cortex XSIAM, Elasticsearch, KQL
+- **SOC & incident response:** CrowdStrike Falcon (EDR), Microsoft Defender, Symantec DLP, Prisma, Check Point, ServiceNow, MITRE ATT&CK
+- **Cloud & identity:** AWS (GuardDuty, CloudTrail, Security Hub, IAM), Azure (Defender for Cloud, Azure AD / Entra ID), GCP
+- **Automation:** SOAR (Cortex XSIAM, CrowdStrike), Python, PowerShell, SQL, CrowdStrike API
+- **AI security (home lab):** OWASP Top 10 for LLM Applications, prompt injection and jailbreak detection, MCP tool and agent security, embeddings and vector search (ChromaDB)
+- **Forensics (lab and coursework):** Volatility, Autopsy, FTK, Wireshark, Ghidra
+- **Vulnerability management:** Qualys, Nessus, CVSS
+
 ## Certifications
 
-GCIH, GSEC, GFACT, CompTIA CySA+, CompTIA Network+, AWS Certified Cloud Practitioner, Microsoft Azure Fundamentals
+GCIH, GSEC, GFACT, CompTIA CySA+, Microsoft Azure Fundamentals
+
+Previously held: CompTIA Network+ (expired 2022), AWS Certified Cloud Practitioner (expired 2024)
 
 ## Repository contents
 

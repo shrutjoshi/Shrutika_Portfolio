@@ -37,6 +37,7 @@
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#work">Work</a></li>
+          <li><a href="#lab">Home lab</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#writing">Writing</a></li>
@@ -50,7 +51,7 @@
   <main id="main">
 
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero band" aria-labelledby="hero-title">
       <div class="wrap">
         <div>
           <p class="role">Cyber Defense Engineer</p>
@@ -66,7 +67,26 @@
         <figure class="rule-file">
           <div class="file">
             <div class="tab"><span>aws_cloudtrail_logging_stopped.yml</span><span>Sigma</span></div>
-<pre><code><span class="ln"><span class="k">title:</span> AWS CloudTrail logging stopped</span><span class="ln"><span class="k">status:</span> experimental</span><span class="ln"><span class="k">description:</span> CloudTrail logging stopped or trail deleted</span><span class="ln"><span class="k">logsource:</span></span><span class="ln">  <span class="k">product:</span> aws</span><span class="ln">  <span class="k">service:</span> cloudtrail</span><span class="ln"><span class="k">detection:</span></span><span class="ln">  <span class="k">selection:</span></span><span class="ln">    <span class="k">eventSource:</span> cloudtrail.amazonaws.com</span><span class="ln">    <span class="k">eventName:</span></span><span class="ln">      - StopLogging</span><span class="ln">      - DeleteTrail</span><span class="ln">  <span class="k">condition:</span> selection</span><span class="ln"><span class="k">falsepositives:</span></span><span class="ln">  - Planned changes by cloud administrators</span><span class="ln"><span class="k">level:</span> <span class="hl">high</span></span><span class="ln"><span class="k">tags:</span></span><span class="ln">  - attack.defense-evasion</span><span class="ln">  - attack.t1562.008</span></code></pre>
+<pre><code><span class="ln"><span class="k">title:</span> AWS CloudTrail logging stopped</span>
+<span class="ln"><span class="k">status:</span> experimental</span>
+<span class="ln"><span class="k">description:</span> CloudTrail logging stopped or trail deleted</span>
+<span class="ln"><span class="k">logsource:</span></span>
+<span class="ln">  <span class="k">product:</span> aws</span>
+<span class="ln">  <span class="k">service:</span> cloudtrail</span>
+<span class="ln"><span class="k">detection:</span></span>
+<span class="ln">  <span class="k">selection:</span></span>
+<span class="ln">    <span class="k">eventSource:</span> cloudtrail.amazonaws.com</span>
+<span class="ln">    <span class="k">eventName:</span></span>
+<span class="ln">      - StopLogging</span>
+<span class="ln">      - DeleteTrail</span>
+<span class="ln">  <span class="k">condition:</span> selection</span>
+<span class="ln"><span class="k">falsepositives:</span></span>
+<span class="ln">  - Planned changes by cloud administrators</span>
+<span class="ln"><span class="k">level:</span> <span class="hl">high</span></span>
+<span class="ln"><span class="k">tags:</span></span>
+<span class="ln">  - attack.defense-evasion</span>
+<span class="ln">  - attack.t1562.008</span></code></pre>
+            <div class="ci-status" aria-label="Example validation result"><span class="ci-dot" aria-hidden="true"></span>sigma check: passed<span class="ci-meta">1 rule, 0 errors</span></div>
           </div>
           <figcaption>Illustrative example written for this site. Not taken from any employer environment.</figcaption>
         </figure>
@@ -96,7 +116,7 @@
     </section>
 
     <!-- Case studies -->
-    <section id="work" aria-labelledby="work-title">
+    <section id="work" class="band" aria-labelledby="work-title">
       <div class="wrap">
         <h2 id="work-title">Case studies</h2>
         <p class="section-intro">What I built, how, and what changed. Filter by domain.</p>
@@ -118,6 +138,8 @@
               <span class="tag">Detection</span>
               <h3>Detection tuning at Veritas</h3>
               <p><span class="case-metric">30% fewer false positives, 25% faster MTTR.</span> Tuning Splunk correlation searches and CrowdStrike Falcon detections.</p>
+              <p class="case-tools">Splunk · CrowdStrike Falcon</p>
+              <span class="case-arrow" aria-hidden="true">&rarr;</span>
             </a>
           </li>
           <li data-domain="automation">
@@ -125,6 +147,8 @@
               <span class="tag">Automation</span>
               <h3>CrowdStrike API investigation automation</h3>
               <p><span class="case-metric">40% less manual investigation.</span> Python automation integrated with the CrowdStrike API.</p>
+              <p class="case-tools">Python · CrowdStrike API</p>
+              <span class="case-arrow" aria-hidden="true">&rarr;</span>
             </a>
           </li>
           <li data-domain="detection">
@@ -132,6 +156,39 @@
               <span class="tag">Detection</span>
               <h3>Sigma detection-as-code pipeline</h3>
               <p><span class="case-metric">Personal project, in progress.</span> Sigma rules validated in CI/CD before SIEM deployment.</p>
+              <p class="case-tools">Sigma · Python · CI/CD</p>
+              <span class="case-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Home lab -->
+    <section id="lab" aria-labelledby="lab-title">
+      <div class="wrap">
+        <h2 id="lab-title">Home-lab projects</h2>
+        <p class="section-intro">Personal projects built in my home lab to go deeper on AI security. They are not production systems.</p>
+        <ul class="case-list">
+          <li>
+            <a href="https://github.com/shrutjoshi/ai-security-range">
+              <span class="tag">AI Security &middot; Home lab</span>
+              <h3>Breach &amp; Brief: AI security training range</h3>
+              <p><span class="case-metric">Six attack scenarios mapped to the OWASP Top 10 for LLM Applications.</span> Direct and indirect prompt injection, MCP tool poisoning, excessive permissions, insecure tool execution, and agent abuse. Detection logic is built as typed, unit-tested Python modules behind a FastAPI service.</p>
+              <p class="case-tools">Python &middot; FastAPI &middot; Docker &middot; OWASP LLM Top 10</p>
+              <span class="case-arrow" aria-hidden="true">&nearr;</span>
+              <span class="visually-hidden">(GitHub repository)</span>
+            </a>
+            <p class="case-links"><a href="https://shrutjoshi.github.io/ai-security-range/src/ai_security_range/static/index.html">Try the live demo</a> <span class="muted">runs in your browser, no sign-up</span></p>
+          </li>
+          <li>
+            <a href="https://github.com/shrutjoshi/ai-jailbreak-detector">
+              <span class="tag">AI Security &middot; Home lab</span>
+              <h3>Layered LLM jailbreak detector</h3>
+              <p><span class="case-metric">99.6% accuracy and 100% recall on a 505-prompt held-out test set.</span> Regex rules, embedding similarity, and an LLM judge for borderline prompts. A 27-prompt red-team suite documents where it fails (encoded, translated, and paraphrased attacks) and how to close each gap.</p>
+              <p class="case-tools">Python &middot; sentence-transformers &middot; ChromaDB &middot; Claude Haiku &middot; Streamlit</p>
+              <span class="case-arrow" aria-hidden="true">&nearr;</span>
+              <span class="visually-hidden">(GitHub repository)</span>
             </a>
           </li>
         </ul>
@@ -139,38 +196,75 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" aria-labelledby="skills-title">
+    <section id="skills" class="band" aria-labelledby="skills-title">
       <div class="wrap">
         <h2 id="skills-title">Skills</h2>
         <div class="groups">
           <div>
-            <h3>Detection</h3>
+            <h3>Detection &amp; SIEM</h3>
             <ul>
               <li>Sigma</li>
-              <li>SIEM (Splunk)</li>
+              <li>Splunk (SPL)</li>
+              <li>Cortex XSIAM</li>
+              <li>Elasticsearch</li>
+              <li>KQL</li>
             </ul>
           </div>
           <div>
             <h3>SOC &amp; incident response</h3>
             <ul>
-              <li>EDR (CrowdStrike)</li>
-              <li>DLP (Symantec)</li>
+              <li>CrowdStrike Falcon (EDR)</li>
+              <li>Microsoft Defender</li>
+              <li>Symantec DLP</li>
+              <li>Prisma (web security)</li>
+              <li>Check Point (removable media control)</li>
+              <li>ServiceNow</li>
+              <li>MITRE ATT&amp;CK</li>
             </ul>
           </div>
           <div>
             <h3>Cloud &amp; identity</h3>
             <ul>
-              <li>AWS</li>
-              <li>Azure (Microsoft Defender for Cloud)</li>
+              <li>AWS: GuardDuty, CloudTrail, Security Hub, IAM</li>
+              <li>Azure: Defender for Cloud, Azure AD (Entra ID)</li>
               <li>GCP</li>
-              <li>IAM</li>
             </ul>
           </div>
           <div>
             <h3>Automation</h3>
             <ul>
-              <li>SOAR</li>
-              <li>Python automation</li>
+              <li>SOAR (Cortex XSIAM, CrowdStrike)</li>
+              <li>Python</li>
+              <li>PowerShell</li>
+              <li>SQL</li>
+              <li>CrowdStrike API</li>
+            </ul>
+          </div>
+          <div>
+            <h3>AI security (home lab)</h3>
+            <ul>
+              <li>OWASP Top 10 for LLM Applications</li>
+              <li>Prompt injection and jailbreak detection</li>
+              <li>MCP tool and agent security</li>
+              <li>Embeddings and vector search (ChromaDB)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Forensics (lab and coursework)</h3>
+            <ul>
+              <li>Volatility</li>
+              <li>Autopsy</li>
+              <li>FTK</li>
+              <li>Wireshark</li>
+              <li>Ghidra</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Vulnerability management</h3>
+            <ul>
+              <li>Qualys</li>
+              <li>Nessus</li>
+              <li>CVSS</li>
             </ul>
           </div>
         </div>
@@ -184,17 +278,17 @@
         <ul class="rows">
           <li><a href="https://www.credly.com/badges/e211305e-f794-4b07-ab8b-7b007ad60472/public_url">GCIH: GIAC Certified Incident Handler</a><span class="issuer">GIAC</span></li>
           <li><a href="https://www.credly.com/badges/17f83215-2322-48b7-8cde-2b6c87291310/public_url">GSEC: GIAC Security Essentials</a><span class="issuer">GIAC</span></li>
-          <li><span>GFACT: GIAC Foundational Cybersecurity Technologies <mark class="todo">[TODO: Credly link for GFACT]</mark></span><span class="issuer">GIAC</span></li>
+          <li><a href="https://www.credly.com/badges/ed6eb31f-61ad-4505-abf5-f2c5c3605100/public_url">GFACT: GIAC Foundational Cybersecurity Technologies</a><span class="issuer">GIAC</span></li>
           <li><a href="https://www.credly.com/badges/298a8495-d589-4d23-a14b-d49e54f39683">CompTIA CySA+</a><span class="issuer">CompTIA</span></li>
-          <li><a href="https://www.credly.com/badges/0c823384-f9e7-4279-ae05-bda9d94b096d">CompTIA Network+</a><span class="issuer">CompTIA</span></li>
-          <li><a href="https://www.credly.com/badges/54c1cbf8-990d-44d6-8f7b-b63b60bd7c47">AWS Certified Cloud Practitioner</a><span class="issuer">Amazon Web Services</span></li>
+          <li><a href="https://www.credly.com/badges/0c823384-f9e7-4279-ae05-bda9d94b096d">CompTIA Network+</a> <span class="muted">(expired 2022)</span><span class="issuer">CompTIA</span></li>
+          <li><a href="https://www.credly.com/badges/54c1cbf8-990d-44d6-8f7b-b63b60bd7c47">AWS Certified Cloud Practitioner</a> <span class="muted">(expired 2024)</span><span class="issuer">Amazon Web Services</span></li>
           <li><a href="https://www.credly.com/badges/9eac1cc9-ade7-418b-8996-1a2de5a35fe0">Microsoft Azure Fundamentals</a><span class="issuer">Microsoft</span></li>
         </ul>
       </div>
     </section>
 
     <!-- Writing -->
-    <section id="writing" aria-labelledby="writing-title">
+    <section id="writing" class="band" aria-labelledby="writing-title">
       <div class="wrap">
         <h2 id="writing-title">Writing</h2>
         <article class="entry">
@@ -224,7 +318,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="about" aria-labelledby="about-title">
+    <section id="about" class="about band" aria-labelledby="about-title">
       <div class="wrap">
         <img class="avatar" src="https://github.com/shrutjoshi.png" alt="Portrait of Shrutika Joshi" width="96" height="96" loading="lazy">
         <div>
