@@ -1,15 +1,24 @@
 /* Shrutika Joshi portfolio
    Plain CSS, no framework. Light and dark via prefers-color-scheme.
-   Contrast: all text pairs below meet WCAG AA (checked). */
+   Palette: midnight and amber. All text pairs meet WCAG AA (checked). */
 
 :root {
-  --bg: #F7F6F2;
-  --surface: #EFEDE7;
-  --ink: #1C2127;
-  --muted: #59616B;
-  --accent: #A84B14;
-  --rule: #DAD7CF;
-  --ok: #2F7D4F;
+  --bg: #F7F7F5;
+  --surface: #EFEEEA;
+  --ink: #141A22;
+  --muted: #56606C;
+  --accent: #A3480A;
+  --on-accent: #FFFFFF;
+  --rule: #DDDBD5;
+  --ok: #15803D;
+
+  /* Midnight band: header and hero, same in light and dark mode */
+  --night: #0E1A2B;
+  --night-raised: #13233A;
+  --night-ink: #F1F4F8;
+  --night-muted: #AEB8C6;
+  --night-rule: #22344F;
+  --amber: #F59E0B;
   --todo-bg: #FFF1B8;
   --todo-ink: #5A4500;
 
@@ -26,13 +35,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121518;
-    --surface: #1B1F23;
-    --ink: #E6E3DC;
-    --muted: #9AA1AA;
-    --accent: #E8955A;
-    --rule: #2A2F35;
-    --ok: #5BBF85;
+    --bg: #0A0F18;
+    --surface: #111A28;
+    --ink: #E6EAF0;
+    --muted: #9AA6B5;
+    --accent: #F59E0B;
+    --on-accent: #0E1A2B;
+    --rule: #1F2A3A;
+    --ok: #4ADE80;
     --todo-bg: #3D3410;
     --todo-ink: #FFE58A;
   }
@@ -118,17 +128,30 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   font-style: normal;
 }
 
+/* ---------- Midnight band (header + hero) ---------- */
+
+.site-header, .hero {
+  --bg: var(--night);
+  --surface: var(--night-raised);
+  --ink: var(--night-ink);
+  --muted: var(--night-muted);
+  --rule: var(--night-rule);
+  --accent: var(--amber);
+  --on-accent: var(--night);
+  --ok: #4ADE80;
+  color: var(--ink);
+}
+main section.hero.band { background: var(--night); }
+.hero .rule-file .file { background: var(--night-raised); box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.55); }
+
 /* ---------- Header ---------- */
 
 .site-header {
   position: relative;
   z-index: 5;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  -webkit-backdrop-filter: saturate(150%) blur(8px);
-  backdrop-filter: saturate(150%) blur(8px);
+  background: var(--bg);
   border-bottom: 1px solid var(--rule);
 }
-@supports not (background: color-mix(in srgb, red, blue)) { .site-header { background: var(--bg); } }
 section[id] { scroll-margin-top: 4.5rem; }
 .site-header .wrap {
   display: flex;
@@ -204,8 +227,8 @@ main section.band { background: var(--surface); }
   font-size: 0.9375rem;
 }
 .button:hover { background: var(--ink); color: var(--bg); }
-.button.primary { background: var(--ink); color: var(--bg); }
-.button.primary:hover { background: transparent; color: var(--ink); }
+.button.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.button.primary:hover { background: transparent; color: var(--accent); }
 
 /* Signature element: Sigma rule as an editor file */
 .rule-file {
@@ -217,7 +240,7 @@ main section.band { background: var(--surface); }
   border: 1px solid var(--rule);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(28, 33, 39, 0.06), 0 12px 32px -12px rgba(28, 33, 39, 0.18);
+  box-shadow: 0 1px 2px rgba(20, 26, 34, 0.06), 0 12px 32px -12px rgba(20, 26, 34, 0.2);
 }
 .ci-status {
   display: flex;
