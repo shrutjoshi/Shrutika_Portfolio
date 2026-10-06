@@ -40,7 +40,7 @@ Personal projects, not production systems.
 
 GCIH, GSEC, GFACT, CompTIA CySA+, Microsoft Azure Fundamentals
 
-Previously held: CompTIA Network+ (expired 2022), AWS Certified Cloud Practitioner (expired 2024)
+Previously held: CompTIA Network+, AWS Certified Cloud Practitioner
 
 ## Repository contents
 
